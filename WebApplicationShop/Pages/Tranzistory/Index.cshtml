@@ -1,0 +1,38 @@
+﻿@page
+@model WebApplicationShop.Pages.Tranzistory.IndexModel
+@{
+}
+
+<br>
+<h2>Zoznam tranzistorov</h2>
+<a class='btn btn-primary btn-sm' href='Tranzistory/Create'>Vytvorit</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Oznacenie</th>
+            <th>Puzdro</th>
+            <th>Typ</th>
+            <th>Mnozstvo</th>
+            <th>Vytvorene</th>
+            <th>Ukon</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.listTranzistory)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.oznacenie</td>
+                <td>@item.puzdro</td>
+                <td>@item.typ</td>
+                <td>@item.mnozstvo</td>
+                <td>@item.vytvorene</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/Tranzistory/Edit?id=@item.id">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="/Tranzistory/Delete?id=@item.id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

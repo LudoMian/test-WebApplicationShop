@@ -1,0 +1,14 @@
+﻿CREATE TABLE tranzistory (
+	Id INT not null PRIMARY KEY IDENTITY,
+	Oznacenie VARCHAR (100) NOT NULL,
+	Puzdro VARCHAR (6) NOT NULL,
+	Typ VARCHAR (3) NOT NULL,
+	Mnozstvo INT,
+	Vytvorene DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO tranzistory (Oznacenie, Puzdro, Typ, Mnozstvo)
+VALUES
+('SPW20N60C3','TO247','FET',1),
+('FGH40N60','TO247','FET',10),
+('KD503','TO3','BJT',0)
