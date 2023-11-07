@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data.SqlClient;
 
@@ -11,7 +10,7 @@ namespace WebApplicationShop.Pages.Clients
         {
             try
             {
-                String connectionString = "Data Source=.\\sqlexpress;Initial Catalog=webshop;Persist Security Info=True;User ID=sa;Password=vito108";
+                String connectionString = "Data Source=.\\sqlexpress;Initial Catalog=webshop;Persist Security Info=True;User ID=sa;Password=***********";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -35,7 +34,7 @@ namespace WebApplicationShop.Pages.Clients
                         }
                     }
                 }
-            
+
             }
             catch (Exception ex)
             {
@@ -43,7 +42,7 @@ namespace WebApplicationShop.Pages.Clients
             }
         }
     }
-    public class ClientInfo 
+    public class ClientInfo
     {
         public String id;
         public String name;
