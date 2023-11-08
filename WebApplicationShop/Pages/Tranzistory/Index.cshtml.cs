@@ -11,7 +11,7 @@ namespace WebApplicationShop.Pages.Tranzistory
         {
             try
             {
-                String connectionString = "Data Source=.\\sqlexpress;Initial Catalog=webshop;Persist Security Info=True;User ID=sa;Password=vito108";
+                String connectionString = "Data Source=.\\sqlexpress;Initial Catalog=webshop;Persist Security Info=True;User ID=sa;Password=*******";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
